@@ -23,7 +23,7 @@ class Solution1:
                 if number >= max:
                     max = number
                 index = test.index(i)
-                test = test[(index+1):] + i
+                test = test[(index + 1):] + i
                 number = len(test)
         if number > max:
             max = number
@@ -60,6 +60,15 @@ class Solution3:
 
         return maxLength
 
+
+if __name__ == '__main__':
+    s1 = "pwwkew"
+    s2 = "pwwkew"
+    a = Solution().lengthOfLongestSubstring(s1)
+    b = Solution1().lengthOfLongestSubstring1(s1)
+    print(a)
+    print(b)
+
 # 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
 #
 # 示例 1:
@@ -73,11 +82,3 @@ class Solution3:
 # 输入: "bbbbb"
 # 输出: 1
 # 解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。
-
-if __name__ == '__main__':
-    s1 = "pwwkew"
-    s2 = "pwwkew"
-    a = Solution().lengthOfLongestSubstring(s1)
-    b = Solution1().lengthOfLongestSubstring1(s1)
-    print(a)
-    print(b)

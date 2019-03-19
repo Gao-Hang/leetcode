@@ -12,11 +12,16 @@ class Solution:
         tmp = ["" for i in range(numRows)]
         for i in s:
             tmp[z] += i
-            if z == (numRows-1) or z == 0: f = not f
-            z = z-1 if f else z+1
+            if z == (numRows - 1) or z == 0: f = not f
+            z = z - 1 if f else z + 1
         return "".join(tmp)
 
 
+if __name__ == '__main__':
+    s = "LEETCODEISHIRING"
+    numRows = 4
+    c = Solution().convert(s, numRows)
+    print(c)
 
 # 将一个给定字符串根据给定的行数，以从上往下、从左到右进行 Z 字形排列。
 #
@@ -47,4 +52,3 @@ class Solution:
 # E   O E   I I
 # E C   I H   N
 # T     S     G
-

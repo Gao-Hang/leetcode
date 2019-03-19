@@ -14,6 +14,12 @@ class Solution(object):
                 maxl += 1
         return s[start:start + maxl]
 
+
+if __name__ == '__main__':
+    a = 'babad'
+    c = Solution().longestPalindrome(a)
+    print(c)
+
 # 给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。
 #
 # 示例 1：
@@ -26,8 +32,3 @@ class Solution(object):
 #
 # 输入: "cbbd"
 # 输出: "bb"
-
-if __name__ == '__main__':
-    a = 'babad'
-    c = Solution().longestPalindrome(a)
-    print(c)

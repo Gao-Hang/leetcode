@@ -10,6 +10,12 @@ class Solution:
             return float(a[i - 1])
 
 
+if __name__ == '__main__':
+    a = [1, 2]
+    b = [3, 4]
+    c = Solution().findMedianSortedArrays(a, b)
+    print(c)
+
 # nums1 = [1, 3]
 # nums2 = [2]
 #
@@ -18,9 +24,3 @@ class Solution:
 # nums1 = [1, 2]
 # nums2 = [3, 4]
 # 则中位数是 (2 + 3)/2 = 2.5
-
-if __name__ == '__main__':
-    a = [1, 2]
-    b = [3, 4]
-    c = Solution().findMedianSortedArrays(a, b)
-    print(c)

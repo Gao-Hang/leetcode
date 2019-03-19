@@ -58,7 +58,7 @@ class Solution2:
             if l2:
                 v2 = l2.val
                 l2 = l2.next
-            carry, val = divmod(v1+v2+carry, 10)
+            carry, val = divmod(v1 + v2 + carry, 10)
             n.next = ListNode(val)
             n = n.next
         return root.next
@@ -75,11 +75,19 @@ class Solution3:
             if l2:
                 carry += l2.val
                 l2 = l2.next
-            cur.next = ListNode(carry%10)
+            cur.next = ListNode(carry % 10)
             cur = cur.next
             carry //= 10
         return dummy.next
 
+
+if __name__ == '__main__':
+    l1 = [2, 4, 3]
+    l2 = [5, 6, 4]
+    l1 = List_Node().list_node(l1)
+    l2 = List_Node().list_node(l2)
+    a = Solution().add_numbers(l1, l2)
+    print(a)
 
 # 给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。
 #
@@ -92,12 +100,3 @@ class Solution3:
 # 输入：(2 -> 4 -> 3) + (5 -> 6 -> 4)
 # 输出：7 -> 0 -> 8
 # 原因：342 + 465 = 807
-
-
-if __name__ == '__main__':
-    l1 = [2, 4, 3]
-    l2 = [5, 6, 4]
-    l1 = List_Node().list_node(l1)
-    l2 = List_Node().list_node(l2)
-    a = Solution().add_numbers(l1, l2)
-    print(a)
