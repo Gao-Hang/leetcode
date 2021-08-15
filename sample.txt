@@ -1,0 +1,7 @@
+ID, col
+1 abc
+1 abc
+2 def
+5 dga
+5 dga
+5 def
